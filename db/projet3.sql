@@ -2,10 +2,10 @@
 -- version 4.5.4.1deb2ubuntu2
 -- http://www.phpmyadmin.net
 --
--- Host: localhost
--- Generation Time: Apr 28, 2017 at 01:46 PM
--- Server version: 5.7.17-0ubuntu0.16.04.2
--- PHP Version: 7.0.15-0ubuntu0.16.04.4
+-- Client :  localhost
+-- Généré le :  Ven 28 Avril 2017 à 17:21
+-- Version du serveur :  5.7.17
+-- Version de PHP :  7.0.15-0ubuntu0.16.04.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,38 +17,39 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `projet3`
+-- Base de données :  `projet3`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `article`
+-- Structure de la table `article`
 --
 
 CREATE TABLE `article` (
   `id` int(11) NOT NULL,
   `title` varchar(255) NOT NULL,
+  `author` varchar(255) NOT NULL,
   `content` text NOT NULL,
   `add_date` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `article`
+-- Contenu de la table `article`
 --
 
-INSERT INTO `article` (`id`, `title`, `content`, `add_date`) VALUES
-(1, 'Preface', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem illum inventore labore molestias odit optio placeat qui repellat temporibus vero. Adipisci aperiam consequatur expedita iure iusto nesciunt officiis totam ut.\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem illum inventore labore molestias odit optio placeat qui repellat temporibus vero. Adipisci aperiam consequatur expedita iure iusto nesciunt officiis totam ut.\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem illum inventore labore molestias odit optio placeat qui repellat temporibus vero. Adipisci aperiam consequatur expedita iure iusto nesciunt officiis totam ut.', '2017-04-08'),
-(2, 'Chapitre 1', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem illum inventore labore molestias odit optio placeat qui repellat temporibus vero. Adipisci aperiam consequatur expedita iure iusto nesciunt officiis totam ut.\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem illum inventore labore molestias odit optio placeat qui repellat temporibus vero. Adipisci aperiam consequatur expedita iure iusto nesciunt officiis totam ut.\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem illum inventore labore molestias odit optio placeat qui repellat temporibus vero. Adipisci aperiam consequatur expedita iure iusto nesciunt officiis totam ut.\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem illum inventore labore molestias odit optio placeat qui repellat temporibus vero. Adipisci aperiam consequatur expedita iure iusto nesciunt officiis totam ut.\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem illum inventore labore molestias odit optio placeat qui repellat temporibus vero. Adipisci aperiam consequatur expedita iure iusto nesciunt officiis totam ut.', '2017-04-10'),
-(3, 'Chapitre 2', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem illum inventore labore molestias odit optio placeat qui repellat temporibus vero. Adipisci aperiam consequatur expedita iure iusto nesciunt officiis totam ut.\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem illum inventore labore molestias odit optio placeat qui repellat temporibus vero. Adipisci aperiam consequatur expedita iure iusto nesciunt officiis totam ut.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem illum inventore labore molestias odit optio placeat qui repellat temporibus vero. Adipisci aperiam consequatur expedita iure iusto nesciunt officiis totam ut.\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem illum inventore labore molestias odit optio placeat qui repellat temporibus vero. Adipisci aperiam consequatur expedita iure iusto nesciunt officiis totam ut.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem illum inventore labore molestias odit optio placeat qui repellat temporibus vero. Adipisci aperiam consequatur expedita iure iusto nesciunt officiis totam ut.\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem illum inventore labore molestias odit optio placeat qui repellat temporibus vero. Adipisci aperiam consequatur expedita iure iusto nesciunt officiis totam ut.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem illum inventore labore molestias odit optio placeat qui repellat temporibus vero. Adipisci aperiam consequatur expedita iure iusto nesciunt officiis totam ut.', '2017-04-12'),
-(4, 'Chapitre 3', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem illum inventore labore molestias odit optio placeat qui repellat temporibus vero. Adipisci aperiam consequatur expedita iure iusto nesciunt officiis totam ut.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem illum inventore labore molestias odit optio placeat qui repellat temporibus vero. Adipisci aperiam consequatur expedita iure iusto nesciunt officiis totam ut.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem illum inventore labore molestias odit optio placeat qui repellat temporibus vero. Adipisci aperiam consequatur expedita iure iusto nesciunt officiis totam ut.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem illum inventore labore molestias odit optio placeat qui repellat temporibus vero. Adipisci aperiam consequatur expedita iure iusto nesciunt officiis totam ut.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem illum inventore labore molestias odit optio placeat qui repellat temporibus vero. Adipisci aperiam consequatur expedita iure iusto nesciunt officiis totam ut.', '2017-04-12'),
-(5, 'Chapitre 4', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem illum inventore labore molestias odit optio placeat qui repellat temporibus vero. Adipisci aperiam consequatur expedita iure iusto nesciunt officiis totam ut.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem illum inventore labore molestias odit optio placeat qui repellat temporibus vero. Adipisci aperiam consequatur expedita iure iusto nesciunt officiis totam ut.\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem illum inventore labore molestias odit optio placeat qui repellat temporibus vero. Adipisci aperiam consequatur expedita iure iusto nesciunt officiis totam ut.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem illum inventore labore molestias odit optio placeat qui repellat temporibus vero. Adipisci aperiam consequatur expedita iure iusto nesciunt officiis totam ut.\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem illum inventore labore molestias odit optio placeat qui repellat temporibus vero. Adipisci aperiam consequatur expedita iure iusto nesciunt officiis totam ut.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem illum inventore labore molestias odit optio placeat qui repellat temporibus vero. Adipisci aperiam consequatur expedita iure iusto nesciunt officiis totam ut.\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem illum inventore labore molestias odit optio placeat qui repellat temporibus vero. Adipisci aperiam consequatur expedita iure iusto nesciunt officiis totam ut.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem illum inventore labore molestias odit optio placeat qui repellat temporibus vero. Adipisci aperiam consequatur expedita iure iusto nesciunt officiis totam ut.', '2017-04-14'),
-(6, 'Chapitre 5', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem illum inventore labore molestias odit optio placeat qui repellat temporibus vero. Adipisci aperiam consequatur expedita iure iusto nesciunt officiis totam ut.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem illum inventore labore molestias odit optio placeat qui repellat temporibus vero. Adipisci aperiam consequatur expedita iure iusto nesciunt officiis totam ut.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem illum inventore labore molestias odit optio placeat qui repellat temporibus vero. Adipisci aperiam consequatur expedita iure iusto nesciunt officiis totam ut.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem illum inventore labore molestias odit optio placeat qui repellat temporibus vero. Adipisci aperiam consequatur expedita iure iusto nesciunt officiis totam ut.\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem illum inventore labore molestias odit optio placeat qui repellat temporibus vero. Adipisci aperiam consequatur expedita iure iusto nesciunt officiis totam ut.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem illum inventore labore molestias odit optio placeat qui repellat temporibus vero. Adipisci aperiam consequatur expedita iure iusto nesciunt officiis totam ut.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem illum inventore labore molestias odit optio placeat qui repellat temporibus vero. Adipisci aperiam consequatur expedita iure iusto nesciunt officiis totam ut.\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem illum inventore labore molestias odit optio placeat qui repellat temporibus vero. Adipisci aperiam consequatur expedita iure iusto nesciunt officiis totam ut.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem illum inventore labore molestias odit optio placeat qui repellat temporibus vero. Adipisci aperiam consequatur expedita iure iusto nesciunt officiis totam ut.', '2017-04-16');
+INSERT INTO `article` (`id`, `title`, `author`, `content`, `add_date`) VALUES
+(1, 'Preface', 'admin', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem illum inventore labore molestias odit optio placeat qui repellat temporibus vero. Adipisci aperiam consequatur expedita iure iusto nesciunt officiis totam ut.\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem illum inventore labore molestias odit optio placeat qui repellat temporibus vero. Adipisci aperiam consequatur expedita iure iusto nesciunt officiis totam ut.\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem illum inventore labore molestias odit optio placeat qui repellat temporibus vero. Adipisci aperiam consequatur expedita iure iusto nesciunt officiis totam ut.', '2017-04-08'),
+(2, 'Chapitre 1', 'admin', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem illum inventore labore molestias odit optio placeat qui repellat temporibus vero. Adipisci aperiam consequatur expedita iure iusto nesciunt officiis totam ut.\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem illum inventore labore molestias odit optio placeat qui repellat temporibus vero. Adipisci aperiam consequatur expedita iure iusto nesciunt officiis totam ut.\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem illum inventore labore molestias odit optio placeat qui repellat temporibus vero. Adipisci aperiam consequatur expedita iure iusto nesciunt officiis totam ut.\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem illum inventore labore molestias odit optio placeat qui repellat temporibus vero. Adipisci aperiam consequatur expedita iure iusto nesciunt officiis totam ut.\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem illum inventore labore molestias odit optio placeat qui repellat temporibus vero. Adipisci aperiam consequatur expedita iure iusto nesciunt officiis totam ut.', '2017-04-10'),
+(3, 'Chapitre 2', 'admin', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem illum inventore labore molestias odit optio placeat qui repellat temporibus vero. Adipisci aperiam consequatur expedita iure iusto nesciunt officiis totam ut.\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem illum inventore labore molestias odit optio placeat qui repellat temporibus vero. Adipisci aperiam consequatur expedita iure iusto nesciunt officiis totam ut.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem illum inventore labore molestias odit optio placeat qui repellat temporibus vero. Adipisci aperiam consequatur expedita iure iusto nesciunt officiis totam ut.\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem illum inventore labore molestias odit optio placeat qui repellat temporibus vero. Adipisci aperiam consequatur expedita iure iusto nesciunt officiis totam ut.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem illum inventore labore molestias odit optio placeat qui repellat temporibus vero. Adipisci aperiam consequatur expedita iure iusto nesciunt officiis totam ut.\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem illum inventore labore molestias odit optio placeat qui repellat temporibus vero. Adipisci aperiam consequatur expedita iure iusto nesciunt officiis totam ut.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem illum inventore labore molestias odit optio placeat qui repellat temporibus vero. Adipisci aperiam consequatur expedita iure iusto nesciunt officiis totam ut.', '2017-04-12'),
+(4, 'Chapitre 3', 'admin', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem illum inventore labore molestias odit optio placeat qui repellat temporibus vero. Adipisci aperiam consequatur expedita iure iusto nesciunt officiis totam ut.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem illum inventore labore molestias odit optio placeat qui repellat temporibus vero. Adipisci aperiam consequatur expedita iure iusto nesciunt officiis totam ut.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem illum inventore labore molestias odit optio placeat qui repellat temporibus vero. Adipisci aperiam consequatur expedita iure iusto nesciunt officiis totam ut.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem illum inventore labore molestias odit optio placeat qui repellat temporibus vero. Adipisci aperiam consequatur expedita iure iusto nesciunt officiis totam ut.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem illum inventore labore molestias odit optio placeat qui repellat temporibus vero. Adipisci aperiam consequatur expedita iure iusto nesciunt officiis totam ut.', '2017-04-12'),
+(5, 'Chapitre 4', 'admin', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem illum inventore labore molestias odit optio placeat qui repellat temporibus vero. Adipisci aperiam consequatur expedita iure iusto nesciunt officiis totam ut.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem illum inventore labore molestias odit optio placeat qui repellat temporibus vero. Adipisci aperiam consequatur expedita iure iusto nesciunt officiis totam ut.\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem illum inventore labore molestias odit optio placeat qui repellat temporibus vero. Adipisci aperiam consequatur expedita iure iusto nesciunt officiis totam ut.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem illum inventore labore molestias odit optio placeat qui repellat temporibus vero. Adipisci aperiam consequatur expedita iure iusto nesciunt officiis totam ut.\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem illum inventore labore molestias odit optio placeat qui repellat temporibus vero. Adipisci aperiam consequatur expedita iure iusto nesciunt officiis totam ut.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem illum inventore labore molestias odit optio placeat qui repellat temporibus vero. Adipisci aperiam consequatur expedita iure iusto nesciunt officiis totam ut.\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem illum inventore labore molestias odit optio placeat qui repellat temporibus vero. Adipisci aperiam consequatur expedita iure iusto nesciunt officiis totam ut.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem illum inventore labore molestias odit optio placeat qui repellat temporibus vero. Adipisci aperiam consequatur expedita iure iusto nesciunt officiis totam ut.', '2017-04-14'),
+(6, 'Chapitre 5', 'admin', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem illum inventore labore molestias odit optio placeat qui repellat temporibus vero. Adipisci aperiam consequatur expedita iure iusto nesciunt officiis totam ut.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem illum inventore labore molestias odit optio placeat qui repellat temporibus vero. Adipisci aperiam consequatur expedita iure iusto nesciunt officiis totam ut.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem illum inventore labore molestias odit optio placeat qui repellat temporibus vero. Adipisci aperiam consequatur expedita iure iusto nesciunt officiis totam ut.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem illum inventore labore molestias odit optio placeat qui repellat temporibus vero. Adipisci aperiam consequatur expedita iure iusto nesciunt officiis totam ut.\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem illum inventore labore molestias odit optio placeat qui repellat temporibus vero. Adipisci aperiam consequatur expedita iure iusto nesciunt officiis totam ut.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem illum inventore labore molestias odit optio placeat qui repellat temporibus vero. Adipisci aperiam consequatur expedita iure iusto nesciunt officiis totam ut.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem illum inventore labore molestias odit optio placeat qui repellat temporibus vero. Adipisci aperiam consequatur expedita iure iusto nesciunt officiis totam ut.\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem illum inventore labore molestias odit optio placeat qui repellat temporibus vero. Adipisci aperiam consequatur expedita iure iusto nesciunt officiis totam ut.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem illum inventore labore molestias odit optio placeat qui repellat temporibus vero. Adipisci aperiam consequatur expedita iure iusto nesciunt officiis totam ut.', '2017-04-16');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `comment`
+-- Structure de la table `comment`
 --
 
 CREATE TABLE `comment` (
@@ -61,7 +62,7 @@ CREATE TABLE `comment` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user`
+-- Structure de la table `user`
 --
 
 CREATE TABLE `user` (
@@ -72,7 +73,7 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `user`
+-- Contenu de la table `user`
 --
 
 INSERT INTO `user` (`id`, `user`, `password`, `is_active`) VALUES
@@ -81,43 +82,43 @@ INSERT INTO `user` (`id`, `user`, `password`, `is_active`) VALUES
 (3, 'bob', 'bob', 1);
 
 --
--- Indexes for dumped tables
+-- Index pour les tables exportées
 --
 
 --
--- Indexes for table `article`
+-- Index pour la table `article`
 --
 ALTER TABLE `article`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `comment`
+-- Index pour la table `comment`
 --
 ALTER TABLE `comment`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `user`
+-- Index pour la table `user`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT pour les tables exportées
 --
 
 --
--- AUTO_INCREMENT for table `article`
+-- AUTO_INCREMENT pour la table `article`
 --
 ALTER TABLE `article`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
--- AUTO_INCREMENT for table `comment`
+-- AUTO_INCREMENT pour la table `comment`
 --
 ALTER TABLE `comment`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT for table `user`
+-- AUTO_INCREMENT pour la table `user`
 --
 ALTER TABLE `user`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
