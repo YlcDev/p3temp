@@ -8,39 +8,28 @@ require 'Article.php';
  * Date: 23/04/17
  * Time: 17:02
  */
-class ArticleManager extends Article
+class ArticleManager extends  EntityManager
 {
-    public function hydrate(array $donnees)
+    private $bdd;
+
+    public function __construct($bdd)
     {
-        if (isset($donnees['id']))
-        {
-            $this->setId($donnees['id']);
-        }
-
-        if (isset($donnees['title']))
-        {
-            $this->setTitle($donnees['title']);
-        }
-
-        if (isset($donnees['content']))
-        {
-            $this->setContent($donnees['content']);
-        }
-
-        if (isset($donnees['add_date']))
-        {
-            $this->setAddDate($donnees['add_date']);
-        }
+        $this->bdd = $bdd;
     }
-
-    public function __construct()
-    {
-
-    }
+    
 
     // Create
     public function addArticle(Article $article)
     {
+        $sql = $this->bdd->prepare('INSERT INTO article (:title, :author, :content, :add_date) VALUES (?, ?, ?, ?)');
+
+        $sql->bindValue(':title', $article->setTitle());
+        $sql->bindValue(':author', $article->setAuthor());
+        $sql->bindValue(':content', $article->setContent());
+        $sql->bindValue(':add_date', $article->setAddDate());
+
+        $sql->execute();
+
 
     }
 
@@ -48,17 +37,33 @@ class ArticleManager extends Article
     public function getArticle()
     {
 
+        $sql = 'SELECT * FROM article';
+
+        return $sql;
+
     }
 
     // Update
     public function editArticle(Article $article)
     {
+        $sql = $this->bdd->prepare('UPDATE article SET title = :title, author = :author, content = :content, add_date = :add_date WHERE id = :id');
 
+        $sql->bindValue(':title', $article->setTitle(), PDO::PARAM_STR);
+        $sql->binValue(':author', $article->setAuthor(), PDO::PARAM_STR);
+        $sql->bindValue(':content', $article->setContent(), PDO::PARAM_STR);
+        $sql->bindValue(':add_date', $article->setAddDate(), PDO::PARAM_STR);
+        $sql->bindValue(':id', $article->setId(), PDO::PARAM_INT);
+
+        $sql->execute();
     }
 
-    //Delete
+    // Delete
     public function deleteArticle(Article $article)
     {
+        $sql = $this->bdd->prepare('DELETE * FROM article WHERE id = :id');
+
+        $sql->bindValue(':id', $article->getId());
+        $sql->execute();
 
     }
 

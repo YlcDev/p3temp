@@ -6,7 +6,7 @@
  * Date: 23/04/17
  * Time: 15:18
  */
-class Comment
+class Comment extends CommentManager
 {
 
     private $id;

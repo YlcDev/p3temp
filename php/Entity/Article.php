@@ -6,12 +6,14 @@
  * Date: 17/04/17
  * Time: 11:42
  */
-class Article
+class Article extends ArticleManager
 {
 
     private $id;
 
     private $title;
+
+    private $author;
 
     private $content;
 
@@ -36,6 +38,16 @@ class Article
     public function setTitle($title)
     {
         $this->title = $title;
+    }
+
+    public function getAuthor()
+    {
+       return $this->author;
+    }
+
+    public function setAuthor($author)
+    {
+        $this->author = $author;
     }
 
     public function getContent()

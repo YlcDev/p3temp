@@ -1,0 +1,12 @@
+Plan entity / manager
+
+EntityManager (hydrate)
+|
+| -> ArticleManager (__construct() / addArticle() / getArticle() / editArticle() / deleteArticle())
+|   -> Article (setter & getter => id / title / author / content / add_date)
+|
+| -> CommentManager (__construct() / addComment() / getComment() / editComment() / deleteComment())
+|   -> Comment (setter & getter => id / title / author / content / add_date)
+|
+| -> UserManager (__construct() / addUser() / getUser() / editUser() / deleteUser())
+|   -> User (setter & getter => id / username / plainPassword / password / salt / role)

@@ -6,7 +6,7 @@
  * Date: 23/04/17
  * Time: 15:08
  */
-class User
+class User extends UserManager
 {
     private $id;
 
