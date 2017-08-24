@@ -6,7 +6,7 @@
  * Date: 17/04/17
  * Time: 11:42
  */
-class Article extends ArticleManager
+class Article
 {
 
     private $id;
@@ -28,6 +28,7 @@ class Article extends ArticleManager
     public function setId($id)
     {
         $this->id = $id;
+        // if is_int($id)
     }
 
     public function getTitle()
@@ -68,6 +69,34 @@ class Article extends ArticleManager
     public function setAddDate($add_date)
     {
         $this->add_date = $add_date;
+    }
+
+    public function hydrate(array $donnees)
+    {
+        if (isset($donnees['id']))
+        {
+            $this->setId($donnees['id']);
+        }
+
+        if (isset($donnees['title']))
+        {
+            $this->setTitle($donnees['title']);
+        }
+
+        if (isset($donnees['content']))
+        {
+            $this->setContent($donnees['content']);
+        }
+
+        if (isset($donnees['add_date']))
+        {
+            $this->setAddDate($donnees['add_date']);
+        }
+    }
+
+    public function __construct()
+    {
+
     }
 
 }
